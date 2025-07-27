@@ -2,11 +2,11 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.4;
-  font-weight: 400;
-  // background-color: $accent;
-
+  font-weight: 500;
+  color: var(--dark-red-color);
+  font-family: var(--font-medium);
 }
 
 .main {
@@ -14,9 +14,10 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1310px;
   margin: 0 auto;
   padding: 0 15px;
+
 }
 
 .sr-only {
@@ -31,8 +32,3 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
-
-
-
-

@@ -1,5 +1,46 @@
+:root {
+  --white-color: #fff;
+  --frame-color: #fff8f0;
+  --dark-red-color: #620d10;
+  --bright-red-color: #bf0909;
+  --black-color: #03070a;
+  --disabled-color: #bbb;
+  --orange: #f77d50;
+  --beige-color: #ffd3c3;
+  --light-color: #ffede6;
+  --hover-color: #ffe0d4;
 
-$accent:#FF6838;
+  --font-regular: "Montserrat", sans-serif;
+  --font-medium: "Montserrat", sans-serif;
+  --font-semibold: "Montserrat", sans-serif;
+  --font-moon: "Moon-Dance", sans-serif;
+  --font-alkia: "Alkia", sans-serif;
+}
+
+
+%bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+//  @extend %bg;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// $accent:#FF6838;
 // $default:#31352B;
 
 
