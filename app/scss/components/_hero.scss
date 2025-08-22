@@ -1,0 +1,136 @@
+.hero {
+  position: relative;
+
+
+
+  &__likes,
+  &__person,
+  &__two-icon,
+  &__comment {
+    position: absolute;
+    object-fit: cover;
+    z-index: 3;
+    max-width: 100%;
+  }
+
+  &__likes {
+    left: 40%;
+    transform: translateY(-20px);
+    max-width: 100%;
+    width: 100px;
+    height: 82px;
+  }
+
+  &__person {
+    left: 48%;
+    top: 40%;
+    width: 156px;
+    height: 138px;
+  }
+
+  &__two-icon {
+    left: 53%;
+    top: 69%;
+    width: 135px;
+  }
+
+  &__comment {
+    left: 43%;
+    top: 69%;
+    width: 60px;
+    height: 60px;
+
+  }
+
+
+
+
+
+
+
+
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    max-width: 830px;
+    width: 100%;
+    padding-top: 70px;
+  }
+
+  &__title {
+    font-family: var(--font-alkia);
+    font-weight: 400;
+    font-size: 116px;
+    background: linear-gradient(153deg, #800a0e 5.29%, #dd1118 36.54%, #dd1219 65.38%, #80181c 91.83%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    max-width: 486px;
+    margin-bottom: 62px;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__link {
+    font-size: 24px;
+    font-family: var(--font-medium);
+    padding: 18px 95px;
+    box-shadow: inset 0 0 0 3px var(--bright-red-color);
+    border-radius: 30px;
+    color: var(--bright-red-color);
+    transition: background-color 0.5s, color 0.5s;
+
+    &:hover {
+      background-color: var(--bright-red-color);
+      color: var(--white-color);
+    }
+
+    &:focus {
+      background-color: var(--dark-red-color);
+      color: var(--white-color);
+      box-shadow: var(--dark-red-color);
+    }
+
+    &:active {
+      background-color: var(--light-color);
+      color: var(--orange);
+    }
+  }
+
+  &__bg {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      right: 0;
+      left: 0;
+      width: 555px;
+      height: 732px;
+      background-color: var(--orange);
+      filter: blur(100px);
+      top: 20px;
+      z-index: 1;
+    }
+  }
+
+  &__img {
+    width: 440px;
+    height: 700px;
+    max-width: 100%;
+    position: relative;
+    z-index: 2;
+    @extend %bg;
+  }
+}

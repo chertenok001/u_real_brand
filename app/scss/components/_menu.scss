@@ -6,12 +6,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
   }
 
   &__item:not(:last-child) {
     margin-right: 5px;
-
   }
 
   &__link {
@@ -21,14 +19,19 @@
     border-radius: 20px;
     padding: 6px 25px;
     width: fit-content;
-    transition: color 0.7s, background-color 0.7s;
+    transition: color 0.8s, background-color 0.8s;
     background-color: transparent;
 
     &:hover {
       background-color: var(--dark-red-color);
-      border-radius: 20px;
       width: fit-content;
       color: var(--white-color);
+    }
+
+    &:focus {
+      outline: 2px solid var(--bright-red-color);
+      background-color: transparent;
+      color: inherit;
     }
   }
 }
