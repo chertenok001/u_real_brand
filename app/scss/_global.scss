@@ -8,6 +8,7 @@ body {
   color: var(--dark-red-color);
   font-family: var(--font-medium);
   background-color: var(--frame-color);
+  overflow: hidden;
 }
 
 .main {
@@ -15,7 +16,7 @@ body {
 }
 
 .container {
-  max-width: 14git00px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 15px;
 }

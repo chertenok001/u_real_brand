@@ -1,8 +1,6 @@
 .hero {
   position: relative;
 
-
-
   &__likes,
   &__person,
   &__two-icon,
@@ -39,16 +37,7 @@
     top: 69%;
     width: 60px;
     height: 60px;
-
   }
-
-
-
-
-
-
-
-
 
   &__box {
     display: flex;
@@ -121,7 +110,7 @@
       background-color: var(--orange);
       filter: blur(100px);
       top: 20px;
-      z-index: 1;
+      z-index: -1;
     }
   }
 
@@ -132,5 +121,32 @@
     position: relative;
     z-index: 2;
     @extend %bg;
+  }
+
+  &__down-list {
+    background-color: var(--bright-red-color);
+    padding: 26px 0;
+  }
+
+  &__down-item {
+    animation: hero__down-list 7s linear infinite alternate;
+    white-space: nowrap;
+  }
+
+  &__down-text {
+    color: var(--white-color);
+    white-space: nowrap;
+     margin-right: 40px;
+  }
+
+  @keyframes hero__down-list {
+
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
   }
 }
