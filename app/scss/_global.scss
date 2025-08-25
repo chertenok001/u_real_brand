@@ -8,7 +8,19 @@ body {
   color: var(--dark-red-color);
   font-family: var(--font-medium);
   background-color: var(--frame-color);
-  overflow: hidden;
+}
+
+.section {
+  padding: 50px 0 70px;
+}
+
+.title {
+  font-family: var(--font-family);
+  font-size: 56px;
+  text-transform: uppercase;
+  background: linear-gradient(153deg, #800a0e 5.29%, #dd1118 36.54%, #dd1219 65.38%, #80181c 91.83%);
+  background-clip: text;
+  text-align: center;
 }
 
 .main {
@@ -16,11 +28,10 @@ body {
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 15px;
 }
-
 
 .sr-only {
   position: absolute;

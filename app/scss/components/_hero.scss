@@ -1,5 +1,6 @@
 .hero {
   position: relative;
+  padding-bottom: 50px;
 
   &__likes,
   &__person,
@@ -105,6 +106,7 @@
       display: block;
       right: 0;
       left: 0;
+      transform: translateX(-70px);
       width: 555px;
       height: 732px;
       background-color: var(--orange);
@@ -125,18 +127,21 @@
 
   &__down-list {
     background-color: var(--bright-red-color);
-    padding: 26px 0;
+    padding: 25px 0 26px;
+    width: 100%;
+    overflow: hidden;
   }
 
   &__down-item {
     animation: hero__down-list 7s linear infinite alternate;
     white-space: nowrap;
+
   }
 
   &__down-text {
     color: var(--white-color);
     white-space: nowrap;
-     margin-right: 40px;
+    margin-right: 70px;
   }
 
   @keyframes hero__down-list {
