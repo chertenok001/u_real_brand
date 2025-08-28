@@ -1,4 +1,6 @@
 .for-whom {
+  padding-bottom: 150px;
+  
   &__title {
     margin-bottom: 80px;
   }
@@ -8,21 +10,6 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 40px 25px;
   }
-
-  // @keyframes fadeInLeft {
-  //   from {
-  //     opacity: 0;
-  //     -webkit-transform: translate3d(-100%, 0, 0);
-  //     transform: translate3d(-100%, 0, 0);
-  //   }
-
-  //   to {
-  //     opacity: 1;
-  //     -webkit-transform: translate3d(0, 0, 0);
-  //     transform: translate3d(0, 0, 0);
-  //   }
-  // }
-
 
   &__item {
     padding: 22px 50px;
@@ -35,7 +22,7 @@
     border-radius: 20px;
     transition: box-shadow 0.5s, background-color 0.5s;
     animation-name: fadeInLeft;
-    animation-duration: 4s;
+    animation-duration: 3s;
 
     &:hover {
       background-color: var(--white-color);
@@ -62,7 +49,6 @@
     }
   }
 
-
   @keyframes fadeInLeft {
     from {
       opacity: 0;
@@ -76,7 +62,6 @@
       transform: translate3d(0, 0, 0);
     }
   }
-
 
   &__img {
     max-width: 114px;
