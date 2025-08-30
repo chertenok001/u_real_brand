@@ -12,6 +12,24 @@
     max-width: 442px;
     width: 100%;
     padding-top: 30px;
+    position: relative;
+    z-index: 7;
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      right: 0;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      background-color: var(--orange);
+      filter: blur(100px);
+      z-index: -2;
+      border-radius: 20px;
+    }
   }
 
   &__img {
