@@ -144,32 +144,6 @@
     overflow: hidden;
   }
 
-  &__link {
-    font-size: 24px;
-    font-family: var(--font-medium);
-    padding: 18px 95px;
-    box-shadow: inset 0 0 0 3px var(--bright-red-color);
-    border-radius: 30px;
-    color: var(--bright-red-color);
-    transition: background-color 0.5s, color 0.5s;
-
-    &:hover {
-      background-color: var(--bright-red-color);
-      color: var(--white-color);
-    }
-
-    &:focus {
-      background-color: var(--dark-red-color);
-      color: var(--white-color);
-      box-shadow: var(--dark-red-color);
-    }
-
-    &:active {
-      background-color: var(--light-color);
-      color: var(--orange);
-    }
-  }
-
   &__bg {
     position: relative;
 

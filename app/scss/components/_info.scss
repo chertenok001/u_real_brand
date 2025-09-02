@@ -4,7 +4,6 @@
     justify-content: space-between;
   }
 
-
   &__pictures {
     max-width: 627px;
     width: 100%;
@@ -22,7 +21,6 @@
 
   &__autor {
     line-height: 1.3;
-
   }
 
   &__autor--one {
@@ -31,18 +29,34 @@
     border-radius: 20px;
     box-shadow: 0 4px 12px 0 #ff6d6d;
     background: linear-gradient(90deg, #fff7f4 4.81%, #ffeae8 32.21%, #ffede6 60.58%, #ffdcd8 94.71%);
+    animation-name: zoomIn;
+    animation-duration:3s;
   }
 
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      -webkit-transform: scale3d(0.3, 0.3, 0.3);
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    50% {
+      opacity: 1;
+    }
+  }
 
   &__autor--two {
     margin-bottom: 130px;
-
+    animation-name: zoomIn;
+    animation-duration: 3s;
   }
-
-
+  
   &__autor--three {
     text-align: right;
     position: relative;
+    margin-bottom: 50px;
+    animation-name: zoomIn;
+    animation-duration: 3s;
 
     &::before {
       position: absolute;
@@ -55,8 +69,12 @@
 
       transform: translateY(-100%);
       background-image: url(../images/icon-info.png);
-
     }
   }
-
+  
+  &__link {
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+  }
 }

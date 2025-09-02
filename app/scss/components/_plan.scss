@@ -1,0 +1,51 @@
+.plan {
+  &__title {
+    margin-bottom: 80px;
+  }
+
+  &__name {
+    display: flex;
+    align-content: flex-end;
+    padding-right: 5px;
+    align-items: baseline;
+    font-family: var(--font-medium);
+    font-size: 36px;
+  }
+
+  &__span {
+    font-family: var(--font-moon);
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 28%;
+    margin-right: 45px;
+    margin-top: -13px;
+  }
+
+  &__block summary {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--dark-red-color);
+  }
+
+  &__img {
+    margin-right: 15px;
+  }
+
+  &__arrow {
+    width: 30px;
+    height: 30px;
+    stroke: var(--dark-red-color);
+    stroke-width: 3;
+    margin: 0 20px 0 auto;
+  }
+
+  &__info {
+    font-family: var(--font-medium);
+    font-size: 28px;
+    line-height: 1.3;
+  }
+}
