@@ -1,3 +1,4 @@
+// 
 .plan {
   &__title {
     margin-bottom: 80px;
@@ -21,6 +22,12 @@
     margin-top: -13px;
   }
 
+  &__block {
+    border-radius: 20px;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
   &__block details {
     border-radius: 20px;
   }
@@ -30,7 +37,6 @@
     list-style: none;
     display: flex;
     align-items: center;
-    list-style: none;
     cursor: pointer;
     padding: 20px;
 
@@ -41,17 +47,19 @@
       right: 0;
       bottom: 0;
       height: 1px;
-      background: var(--dark-red-color);
+      background-color: var(--dark-red-color);
       transition: opacity 0.3s ease;
     }
   }
 
   &__block[open] summary::after {
     opacity: 0;
+    border-radius: 20px;
   }
 
   &__block[open] summary {
     background-color: var(--light-color);
+    border-radius: 20px 20px 0 0;
   }
 
   &__img {
@@ -68,7 +76,6 @@
 
   &__block {
     transition: background-color 0.3s;
-    border-radius: 20px 20px 0 0;
 
     &:hover {
       background-color: var(--beige-color);
@@ -82,32 +89,70 @@
   }
 
   &__content {
-    color: red;
+    color: var(--dark-red-color);
     font-size: 25px;
     padding-block: 25px;
     padding-inline: 135px 20px;
     background-color: var(--beige-color);
     left: 0;
     right: 0;
+    border-radius: 0 0 20px 20px;
+    position: absolute;
+    top: 100%;
+    display: none;
+    z-index: 3;
+    opacity: 0;
+    // transform: translateY(-10px);
+    // transition: all 0.3s ease;
+    // pointer-events: none;
+
+  }
+
+  &__block[open] &__content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
 
   &__item {
     display: flex;
+    align-items: center;
   }
 
   &__item:not(:last-child) {
     margin-bottom: 10px;
+  }
 
+  &__subject--icon {
+    width: 20px;
+    height: 20px;
+    padding-inline: 65px;
+    fill: #d4a000;
   }
 
   &__subject {
     display: block;
     font-family: var(--font-family);
-
     font-size: 24px;
     text-align: center;
     color: var(--dark-red-color);
     margin-right: 10px;
+  }
+
+  &__number--one {
+    padding-left: 20px;
+  }
+
+  &__item--star::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 22px;
+    height: 22px;
+    background-image: url("..images/icons/icon-star.svg");
+    left: 0;
+    @extend %bg;
   }
 
   &__number {
@@ -119,15 +164,10 @@
     margin-right: 50px;
   }
 
-
   &__text {
     font-weight: 400;
     font-size: 20px;
     color: var(--dark-red-color);
     transition: max-height 0.5s;
   }
-
-
-
-
 }
