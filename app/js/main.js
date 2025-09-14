@@ -20,3 +20,4 @@ document.querySelectorAll(".plan__block summary").forEach(summary => {
     });
   });
 });
+
