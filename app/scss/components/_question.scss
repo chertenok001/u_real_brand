@@ -1,0 +1,21 @@
+.question {
+  &__title {
+    font-family: var(--font-alkia);
+    font-weight: 800;
+    font-size: 56px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    font-family: var(--font-moon);
+    font-weight: 400;
+    font-size: 56px;
+  }
+
+  &__img {
+    max-width: 707px;
+    width: 100%;
+    border-radius: 20px;
+  }
+}
