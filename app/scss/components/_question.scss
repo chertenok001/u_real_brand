@@ -14,7 +14,6 @@
     margin-bottom: 35px;
   }
 
-
   &__title {
     font-family: var(--font-alkia);
     font-weight: 800;
@@ -38,8 +37,9 @@
 
   &__img {
     max-width: 707px;
-    width: 100%;
+  
     border-radius: 20px;
+    object-fit: contain;
   }
 
   &__info {
@@ -66,14 +66,19 @@
     text-transform: uppercase;
   }
 
-
   &__input::placeholder {
     color: var(--disabled-color);
   }
 
   &__input:not(:last-child) {
     margin-bottom: 40px;
-
   }
+
+  &__btn {
+    padding: 18px 140px;
+    display: block;
+    width: fit-content;
+  }
+
 
 }
