@@ -1,0 +1,40 @@
+.reviews {
+
+
+  &__figure {
+    display: flex;
+    align-items: center;
+  }
+
+  &__rating {
+    display: flex;
+
+  }
+
+  &__star {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 16px;
+      height: 16px;
+      background-image: url(../images/sprite.svg#icon-rating);
+      @extend %bg;
+      filter: invert(70%) sepia(59%) saturate(1398%) hue-rotate(357deg) brightness(100%) contrast(110%);
+    }
+  }
+
+
+  &__img {
+    border-radius: 50px;
+    margin-right: 20px;
+  }
+}
