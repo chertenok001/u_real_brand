@@ -1,4 +1,22 @@
 $(function () {
+  const swiper = new Swiper('.swiper', {
+
+    direction: 'horizontal',
+    slidesPerView: 3,
+    loop: true,
+    spaceBetween: 100,
+   
+
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+
+    },
+  });
+
+
+
   wow = new WOW({
     boxClass: 'wow',
     animateClass: 'animate__animated',
@@ -7,11 +25,16 @@ $(function () {
     live: true
   })
   wow.init();
+
+
 });
+
+
+
 
 document.querySelectorAll(".plan__block summary").forEach(summary => {
   summary.addEventListener("click", (e) => {
-    const current = summary.parentElement; 
+    const current = summary.parentElement;
 
     document.querySelectorAll(".plan__block").forEach(block => {
       if (block !== current) {
@@ -20,4 +43,3 @@ document.querySelectorAll(".plan__block summary").forEach(summary => {
     });
   });
 });
-

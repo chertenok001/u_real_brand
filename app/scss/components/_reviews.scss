@@ -1,24 +1,96 @@
 .reviews {
 
+  &__title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 56px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: var(--dark-red-color);
+  }
+
+  &__text {
+    text-align: center;
+    max-width: 478px;
+    width: 100%;
+    margin: 0 auto 80px;
+  }
+
+  &__box {
+    display: flex;
+    padding-bottom: 85px;
+  }
 
   &__item {
     padding: 24px;
+    box-sizing: border-box;
     background-color: var(--light-color);
     border: 1px solid var(--beige-color);
     border-radius: 20px;
-    width: 368px;
-    max-width: 100%;
-    margin-right: 80px;
+    width: 100%;
+    height: 100%;
+    max-width: 368px;
+    position: relative;
+
+    &::after {
+      display: block;
+      content: '';
+      position: absolute;
+      background-image: url('../images/icon-reviews.svg');
+      object-fit: cover;
+      width: 82px;
+      height: 60px;
+      top: -50px;
+      right: 20px;
+    }
   }
 
-  &__list {
+  .reviews__slider {
+    overflow: visible;
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+
+  .swiper-wrapper {
+    padding-top: 50px;
+  }
+
+  .swiper-pagination {
+    bottom: 0;
+
+
+  }
+
+  .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    background-color: var(--beige-color);
+    border-radius: 50px;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 20px;
+    height: 20px;
+    background-color: var(--bright-red-color);
+  }
+
+
+
+
+  &__list,
+  &__rating {
     display: flex;
   }
-
 
   &__figure {
     display: flex;
-
     align-items: center;
     margin-bottom: 15px;
   }
@@ -27,7 +99,6 @@
     margin-bottom: 15px;
     flex-direction: column;
     display: flex;
-
   }
 
   &__span-blockquote {
@@ -40,11 +111,10 @@
     font-size: 14px;
     line-height: 150%;
     color: var(--dark-red-color);
+    box-sizing: border-box;
   }
 
-  &__rating {
-    display: flex;
-  }
+
 
   &__star {
     width: 24px;
@@ -66,7 +136,6 @@
       filter: invert(70%) sepia(59%) saturate(1398%) hue-rotate(357deg) brightness(100%) contrast(110%);
     }
   }
-
 
   &__img {
     border-radius: 50px;

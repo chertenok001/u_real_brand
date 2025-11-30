@@ -23,13 +23,15 @@
     margin: 0 auto;
   }
 
+  &__top {
+    margin-bottom: 25px;
+  }
+
   &__content {
     max-width: 708px;
     width: 100%;
     margin-right: 32px;
   }
-
-  
 
   &__subtitle {
     font-weight: 600;
@@ -39,9 +41,9 @@
 
   &__img {
     max-width: 707px;
-  
+
     border-radius: 20px;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   &__info {
@@ -81,6 +83,5 @@
     display: block;
     width: fit-content;
   }
-
 
 }
