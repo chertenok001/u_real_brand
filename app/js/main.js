@@ -6,15 +6,12 @@ $(function () {
     loop: true,
     spaceBetween: 100,
    
-
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
       clickable: true,
-
     },
   });
-
 
 
   wow = new WOW({
@@ -25,12 +22,7 @@ $(function () {
     live: true
   })
   wow.init();
-
-
 });
-
-
-
 
 document.querySelectorAll(".plan__block summary").forEach(summary => {
   summary.addEventListener("click", (e) => {
