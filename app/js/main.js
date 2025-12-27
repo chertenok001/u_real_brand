@@ -3,7 +3,7 @@ $(function () {
 
     direction: 'horizontal',
     slidesPerView: 3,
-    loop: true,
+    loop: false,
     spaceBetween: 100,
    
     pagination: {
