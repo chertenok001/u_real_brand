@@ -4,11 +4,21 @@
   &__top {
     padding: 50px 0px 20px;
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
+    transition: padding 0.5s, box-shadow 0.3s, background-color 0.5s;
+
+
+    &--fixed {
+      padding: 20px 0px 20px;
+      background-color: var(--white-color);
+      box-shadow: #bf0909 0px 25px 20px -20px;
+    }
+
+
   }
 
   &__link {
