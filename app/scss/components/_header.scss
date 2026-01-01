@@ -16,12 +16,17 @@
       padding: 20px 0px 20px;
       background-color: var(--white-color);
       box-shadow: #bf0909 0px 25px 20px -20px;
+
+
+      @include mq('laptop') {
+        padding: 22px 0px 14px;
+      }
+
+
     }
 
-
-  }
-
-  &__link {
-    color: var(--dark-red-color);
+    &__link {
+      color: var(--dark-red-color);
+    }
   }
 }

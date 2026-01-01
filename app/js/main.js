@@ -34,7 +34,7 @@ $('a[href^="#"]').on('click', function (e) {
 
     $('html, body').animate(
       { scrollTop: top },
-      800
+      1200
     );
   }
 });
@@ -50,7 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
-
 
 document.querySelectorAll(".plan__block summary").forEach(summary => {
   summary.addEventListener("click", (e) => {

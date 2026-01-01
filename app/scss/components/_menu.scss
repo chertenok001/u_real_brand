@@ -6,10 +6,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include mq('laptop') {
+      display: none;
+    }
   }
 
   &__item:not(:last-child) {
     margin-right: 5px;
+
+    @include mq('desktop') {
+      margin-right: 0px;
+    }
   }
 
   &__link {
@@ -33,5 +41,47 @@
       background-color: transparent;
       color: inherit;
     }
+
+    @include mq('desktop') {
+      padding: 6px 18px;
+    }
   }
+
+
+  &__btn {
+    display: none;
+    position: relative;
+    bottom: 6px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: var(--dark-red-color);
+    align-items: center;
+
+    &-span,
+    &:after,
+    &:before {
+      position: absolute;
+      content: "";
+      width: 30px;
+      height: 2px;
+      background-color: var(--white-color);
+      left: 12px;
+    }
+
+    &::before {
+      top: 20px;
+    }
+
+    &::after {
+      bottom: 17px;
+    }
+
+    @include mq("laptop") {
+      display: block;
+    }
+
+  }
+
+
 }
