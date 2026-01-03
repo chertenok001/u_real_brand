@@ -6,7 +6,8 @@ body {
   line-height: 1.4;
   font-weight: 500;
   color: var(--dark-red-color);
-  font-family: var(--font-medium); font-family: var(--font-medium);
+  font-family: var(--font-medium);
+  font-family: var(--font-medium);
   background-color: var(--frame-color);
 }
 
@@ -70,4 +71,20 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.lock {
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+  }
 }

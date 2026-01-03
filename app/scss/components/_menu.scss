@@ -57,6 +57,8 @@
     border-radius: 50%;
     background-color: var(--dark-red-color);
     align-items: center;
+    z-index: 2;
+    transition: transform 0.3s;
 
     &-span,
     &:after,
@@ -75,6 +77,26 @@
 
     &::after {
       bottom: 17px;
+    }
+
+    &--active {
+      transition: transform 0.3s;
+
+      &::before {
+        transform: rotate(45deg);
+        top: 50%;
+        transition: transform 0.9s;
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+        top: 50%;
+        transition: transform 0.9s;
+      }
+    }
+
+    &--active &-span {
+      background-color: transparent;
     }
 
     @include mq("laptop") {

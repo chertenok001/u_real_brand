@@ -1,7 +1,15 @@
 .menu-mobile {
 
-  transform: translateX(-200px);
+  transform: translateX(200%);
   transition: transform 0.9s;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  justify-content: space-around;
+
+  &__list, .footer-social {
+    display: none;
+  }
 
   @include mq('laptop') {
 
@@ -11,56 +19,59 @@
     right: 0;
     bottom: 0;
     height: 100vh;
-    width: 500px;
+    width: 300px;
     overflow-y: auto;
     z-index: 1;
     border-radius: 20px 0 0 20px;
 
-    &__logo {
-      display: block;
-    }
 
     &--active {
       padding-bottom: 50px;
       transform: translateX(0);
-      transition: transform 0.6s;
+      transition: transform 0.9s;
     }
 
     &__list {
-          margin-bottom: 50px;
+      margin-bottom: 50px;
       text-align: center;
+      display: block;
+
     }
 
- &__link {
-    font-weight: 400;
-    line-height: 1.4%;
-    font-family: var(--font-medium);
-    border-radius: 20px;
-    padding: 6px 25px;
-    color: var(--white-color);
-    width: fit-content;
-    transition: color 0.8s, background-color 0.8s;
-    background-color: transparent;
-
-    &:hover {
-      background-color: var(--white-color);
+    &__link {
+      font-weight: 400;
+      line-height: 1.4%;
+      font-family: var(--font-medium);
+      border-radius: 20px;
+      padding: 6px 25px;
+      color: var(--white-color);
       width: fit-content;
-      color: var(--dark-red-color);
-    }
+      transition: color 0.8s, background-color 0.8s;
+      background-color: transparent;
 
-    &:focus {
-      outline: 2px solid var(--bright-red-color);
-      background-color: var(--beige-color);
-      color: inherit;
-    }
+      &:hover {
+        background-color: var(--white-color);
+        width: fit-content;
+        color: var(--dark-red-color);
+      }
 
-    @include mq('desktop') {
-      padding: 6px 18px;
+      &:focus {
+        outline: 2px solid var(--bright-red-color);
+        background-color: var(--beige-color);
+        color: inherit;
+      }
+
+      @include mq('desktop') {
+        padding: 6px 18px;
+      }
     }
-  }
 
     &__item:not(:last-child) {
       margin-bottom: 40px;
+    }
+
+    & .footer-social {
+      display: block;
     }
 
     &__btn {
@@ -97,15 +108,7 @@
         transform: translateX(-9px);
         display: block;
       }
-
     }
-
-
-
-
-
-
-
 
   }
 

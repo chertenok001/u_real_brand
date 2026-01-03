@@ -45,10 +45,9 @@
 // }
 
 
-$breakpoints: 
-("phone": 560px,
+$breakpoints: ("phone": 560px,
   "tablet": 768px,
   "laptop": 992px,
-  "desktop": 1200px,
-  "l-desktop": 1820px);  
+  "desktop": 1280px,
+  "desktop-l":1330px);
 // @include mq('tablet-2') {
