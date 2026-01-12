@@ -22,7 +22,12 @@
 
     @include mq('desktop') {
       left: 15%;
+    }
 
+    @include mq('laptop') {
+      bottom: 49%;
+      width: 73px;
+      height: 65px;
     }
   }
 
@@ -54,6 +59,11 @@
       left: 44%;
       top: -2%;
     }
+
+    @include mq('laptop') {
+      width: 127px;
+      height: 71px;
+    }
   }
 
   @keyframes pulse {
@@ -76,13 +86,20 @@
   &__two-icon {
     left: 53%;
     top: 69%;
-    width: 135px;
+    width: 120px;
     animation: pulse 1.4s linear infinite alternate;
 
     @include mq('desktop') {
       left: 41%;
       top: 44%;
     }
+
+    @include mq('laptop') {
+      left: 84%;
+      top: 0%;
+      width: 90px;
+    }
+
   }
 
   @keyframes pulse {
@@ -113,6 +130,11 @@
       left: 49%;
       top: 23%;
     }
+
+    @include mq('laptop') {
+      left: 44%;
+      top: 49%;
+    }
   }
 
   @keyframes pulse {
@@ -135,6 +157,12 @@
   &__box {
     display: flex;
     justify-content: space-between;
+
+    @include mq('laptop') {
+      overflow: hidden;
+    }
+
+
   }
 
   &__content {
@@ -146,6 +174,16 @@
     @include mq('desktop') {
       max-width: 530px;
     }
+
+    @include mq('laptop') {
+      z-index: 3;
+      max-width: 407px;
+    }
+
+    @include mq('tablet') {
+      position: absolute;
+    }
+
   }
 
 
@@ -158,6 +196,10 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 30px;
+
+    @include mq('laptop') {
+      margin-bottom: 100px;
+    }
   }
 
   &__text {
@@ -167,10 +209,22 @@
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
     overflow: hidden;
+
+    @include mq('laptop') {
+      font-size: 16px;
+      max-width: 390px;
+    }
   }
 
-  &__bg {
+
+
+  &__img {
+    width: 440px;
+    height: 700px;
+    max-width: 100%;
     position: relative;
+    object-fit: cover;
+    @extend %bg;
 
     &::after {
       content: "";
@@ -186,18 +240,15 @@
       -webkit-filter: blur(100px);
       filter: blur(100px);
       z-index: -1;
+
+      @include mq('laptop') {
+        display: none;
+      }
     }
 
-  }
+    @include mq('laptop') {}
 
-  &__img {
-    width: 440px;
-    height: 700px;
-    max-width: 100%;
-    position: relative;
-    z-index: 2;
-    object-fit: cover;
-    @extend %bg;
+
   }
 
   &__down-list {
