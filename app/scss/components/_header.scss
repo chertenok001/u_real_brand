@@ -1,6 +1,14 @@
 .header {
   padding-top: 140px;
 
+  @include mq('laptop') {
+    padding-top: 120px;
+  }
+
+  @include mq('tablet') {
+    padding-top: 100px;
+  }
+
   &__top {
     padding: 50px 0px 20px;
     position: fixed;
@@ -11,18 +19,20 @@
     width: 100%;
     transition: padding 0.5s, box-shadow 0.3s, background-color 0.5s;
 
+    @include mq('tablet') {
+      padding: 35px 0px 14px;
+    }
 
     &--fixed {
       padding: 20px 0px 20px;
       background-color: var(--white-color);
       box-shadow: #bf0909 0px 25px 20px -20px;
 
-      @include mq('laptop') {
-        padding: 22px 0px 14px;
-      }
-
+ 
 
     }
+
+
 
     &__link {
       color: var(--dark-red-color);

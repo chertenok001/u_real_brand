@@ -99,7 +99,6 @@
       top: 0%;
       width: 90px;
     }
-
   }
 
   @keyframes pulse {
@@ -161,8 +160,6 @@
     @include mq('laptop') {
       overflow: hidden;
     }
-
-
   }
 
   &__content {
@@ -176,14 +173,13 @@
     }
 
     @include mq('laptop') {
-      z-index: 3;
+      // z-index: 3;
       max-width: 407px;
     }
 
     @include mq('tablet') {
       position: absolute;
     }
-
   }
 
 
@@ -198,7 +194,12 @@
     margin-bottom: 30px;
 
     @include mq('laptop') {
-      margin-bottom: 100px;
+      margin-bottom: 80px;
+    }
+
+    @include mq('tablet') {
+      font-size: 90px;
+      margin-bottom: 50px;
     }
   }
 
@@ -215,8 +216,6 @@
       max-width: 390px;
     }
   }
-
-
 
   &__img {
     width: 440px;
@@ -246,9 +245,10 @@
       }
     }
 
-    @include mq('laptop') {}
-
-
+    @include mq('tablet') {
+      left: 50%;
+      width: 415px;
+    }
   }
 
   &__down-list {
@@ -256,6 +256,10 @@
     padding: 25px 0 26px;
     width: 100%;
     overflow: hidden;
+
+    @include mq('tablet') {
+      display: none;
+    }
   }
 
   &__down-item {
@@ -278,5 +282,16 @@
     100% {
       transform: translateX(-50%);
     }
+  }
+
+  &__link {
+
+    @include mq('tablet') {
+      font-size: 19px;
+
+      padding: 17px 51px;
+    }
+
+
   }
 }
