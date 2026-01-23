@@ -279,53 +279,54 @@
 
     @include mq('tablet') {
       left: 50%;
-      width: 328px;
-      height: 543px;
+      width: 320px;
+      height: 509px;
     }
   }
 
-  &__down-list {
-    background-color: var(--bright-red-color);
-    padding: 25px 0 26px;
-    width: 100%;
-    overflow: hidden;
 
-    @include mq('tablet') {
-      display: none;
-    }
+&__down-list {
+  background-color: var(--bright-red-color);
+  padding: 25px 0 26px;
+  width: 100%;
+  overflow: hidden;
+
+  @include mq('tablet') {
+    display: none;
+  }
+}
+
+&__down-item {
+  animation: hero__down-list 7s linear infinite alternate;
+  white-space: nowrap;
+}
+
+&__down-text {
+  color: var(--white-color);
+  white-space: nowrap;
+  margin-right: 70px;
+}
+
+@keyframes hero__down-list {
+
+  0% {
+    transform: translateX(0%);
   }
 
-  &__down-item {
-    animation: hero__down-list 7s linear infinite alternate;
-    white-space: nowrap;
+  100% {
+    transform: translateX(-50%);
   }
+}
 
-  &__down-text {
+&__link {
+
+  @include mq('tablet') {
+    font-size: 19px;
     color: var(--white-color);
-    white-space: nowrap;
-    margin-right: 70px;
+    box-shadow: inset 0 0 0 3px var(--white-color);
+    padding: 17px 51px;
   }
 
-  @keyframes hero__down-list {
+}
 
-    0% {
-      transform: translateX(0%);
-    }
-
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-
-  &__link {
-
-    @include mq('tablet') {
-      font-size: 19px;
-      color: var(--white-color);
-      box-shadow: inset 0 0 0 3px var(--white-color);
-      padding: 17px 51px;
-    }
-
-
-  }
 }
