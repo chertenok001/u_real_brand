@@ -180,8 +180,8 @@
     display: flex;
     justify-content: space-between;
 
-   
-  
+
+
   }
 
   &__content {
@@ -226,10 +226,10 @@
 
 
 
-    // @include mq('laptop') {
-    //   margin-bottom: 80px;
-    //   font-size: 100px;
-    // }
+    @include mq('laptop') {
+      // margin-bottom: 80px;
+      font-size: 100px;
+    }
 
     // @include mq('tablet') {
     //   font-size: 80px;
@@ -265,12 +265,13 @@
     object-fit: cover;
     @extend %bg;
 
+
     &::after {
       content: "";
       position: absolute;
       display: block;
       right: 0;
-      left: 50%;
+      left: 45%;
       transform: translateX(-64%);
       top: 0;
       width: 660px;
@@ -280,14 +281,20 @@
       filter: blur(100px);
       z-index: -1;
 
-      // @include mq('laptop') {
-      //   display: none;
-      // }
+
+      @include mq('laptop') {
+        width: 548px;
+
+      }
+
+      @include mq('tablet') {
+        display: none;
+      }
     }
 
     @include mq('laptop') {
-      width: 412px;
-      height: 633px;
+      width: 350px;
+      height: 600px;
     }
 
 
@@ -334,11 +341,16 @@
   &__link {
 
     @include mq('tablet') {
-      font-size: 19px;
       color: var(--white-color);
       box-shadow: inset 0 0 0 3px var(--white-color);
       padding: 17px 51px;
+
+    }
+
+
+    @include mq('laptop') {
       display: block;
+      font-size: 18px;
     }
 
   }
