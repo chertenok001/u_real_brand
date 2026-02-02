@@ -1,10 +1,11 @@
 .hero {
   position: relative;
-  padding-bottom: 50px;
+
 
   @include mq('tablet') {
     padding-bottom: 0;
   }
+
 
   @include mq('tablet') {
     &::after {
@@ -42,7 +43,7 @@
     }
 
     @include mq('laptop') {
-      bottom: 49%;
+      bottom: 43%;
       width: 73px;
       height: 65px;
     }
@@ -178,6 +179,9 @@
   &__box {
     display: flex;
     justify-content: space-between;
+
+   
+  
   }
 
   &__content {
@@ -193,12 +197,18 @@
 
     @include mq('laptop') {
       max-width: 407px;
+      padding-top: 40px;
     }
 
-    @include mq('tablet') {
-      position: absolute;
-      padding-top: 0;
-      padding-left: 40px;
+    // @include mq('tablet') {
+    //   // position: absolute;
+    //   padding-top: 0;
+    //   padding-left: 40px;
+    // }
+
+    @include mq('phone') {
+      max-width: 100%;
+      padding-left: 0;
     }
 
   }
@@ -214,18 +224,21 @@
     -webkit-text-fill-color: transparent;
     margin-bottom: 30px;
 
-    @include mq('laptop') {
-      margin-bottom: 80px;
-      font-size: 100px;
-    }
 
-    @include mq('tablet') {
-      font-size: 80px;
-      margin-bottom: 50px;
-    }
+
+    // @include mq('laptop') {
+    //   margin-bottom: 80px;
+    //   font-size: 100px;
+    // }
+
+    // @include mq('tablet') {
+    //   font-size: 80px;
+    //   margin-bottom: 50px;
+    // }
   }
 
   &__text {
+    font-size: 20px;
     max-width: 486px;
     margin-bottom: 62px;
     display: -webkit-box;
@@ -261,15 +274,15 @@
       transform: translateX(-64%);
       top: 0;
       width: 660px;
-      height: 100vh;
+      height: 100%;
       background-color: var(--orange);
       -webkit-filter: blur(100px);
       filter: blur(100px);
       z-index: -1;
 
-      @include mq('laptop') {
-        display: none;
-      }
+      // @include mq('laptop') {
+      //   display: none;
+      // }
     }
 
     @include mq('laptop') {
@@ -278,11 +291,10 @@
     }
 
 
-    @include mq('tablet') {
-      left: 50%;
-      width: 320px;
-      height: 509px;
-    }
+    // @include mq('tablet') {
+    //   width: 320px;
+    //   height: 509px;
+    // }
   }
 
 
@@ -326,6 +338,7 @@
       color: var(--white-color);
       box-shadow: inset 0 0 0 3px var(--white-color);
       padding: 17px 51px;
+      display: block;
     }
 
   }
