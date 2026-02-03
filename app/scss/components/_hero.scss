@@ -43,7 +43,7 @@
     }
 
     @include mq('laptop') {
-      bottom: 43%;
+      bottom: 49%;
       width: 73px;
       height: 65px;
     }
@@ -113,9 +113,9 @@
     }
 
     @include mq('laptop') {
-      left: 84%;
+      left: 90%;
       top: 0%;
-      width: 90px;
+      width: 68px;
     }
   }
 
@@ -149,8 +149,8 @@
     }
 
     @include mq('laptop') {
-      left: 44%;
-      top: 49%;
+      left: 47%;
+      top: 67%;
     }
 
     @include mq('tablet') {
