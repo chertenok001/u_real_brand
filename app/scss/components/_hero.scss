@@ -181,38 +181,33 @@
     justify-content: space-between;
 
 
-
+    @include mq('tablet') {
+      justify-content: center;
+    }
   }
 
   &__content {
-    max-width: 830px;
     width: 100%;
     padding-top: 70px;
     z-index: 2;
 
 
-    @include mq('desktop') {
-      max-width: 530px;
-    }
-
     @include mq('laptop') {
-      max-width: 407px;
-      padding-top: 40px;
+      padding-top: 0;
+
     }
 
-    // @include mq('tablet') {
-    //   // position: absolute;
-    //   padding-top: 0;
-    //   padding-left: 40px;
-    // }
-
-    @include mq('phone') {
-      max-width: 100%;
-      padding-left: 0;
+    @include mq('tablet') {
+      width: fit-content;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-between;
     }
 
+    @include mq('phone') {}
   }
-
 
   &__title {
     font-family: var(--font-alkia);
@@ -227,14 +222,9 @@
 
 
     @include mq('laptop') {
-      // margin-bottom: 80px;
       font-size: 100px;
     }
 
-    // @include mq('tablet') {
-    //   font-size: 80px;
-    //   margin-bottom: 50px;
-    // }
   }
 
   &__text {
@@ -257,6 +247,17 @@
     }
   }
 
+  &__foto {
+
+    @include mq('laptop') {
+      margin: 0 auto;
+    }
+
+  }
+
+
+
+
   &__img {
     width: 440px;
     height: 700px;
@@ -264,6 +265,11 @@
     position: relative;
     object-fit: cover;
     @extend %bg;
+
+    @include mq('laptop') {
+      width: 350px;
+      height: 600px;
+    }
 
 
     &::after {
@@ -289,19 +295,9 @@
 
       @include mq('tablet') {
         display: none;
+
       }
     }
-
-    @include mq('laptop') {
-      width: 350px;
-      height: 600px;
-    }
-
-
-    // @include mq('tablet') {
-    //   width: 320px;
-    //   height: 509px;
-    // }
   }
 
 
