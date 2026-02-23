@@ -13,7 +13,7 @@
       display: block;
       position: absolute;
       background-image: url('../images/hero-bg.png');
-      top: 0;
+      top: 87px;
       right: 0;
       bottom: 0;
       left: 0;
@@ -47,7 +47,13 @@
       width: 73px;
       height: 65px;
     }
+
+    @include mq('tablet') {
+      bottom: 66%;
+      left: 30%;
+    }
   }
+
 
   @keyframes pulse {
     from {
@@ -82,7 +88,13 @@
       width: 127px;
       height: 71px;
     }
+
+    @include mq('tablet') {
+      left: 4%;
+      top: 52%;
+    }
   }
+
 
   @keyframes pulse {
     from {
@@ -117,7 +129,13 @@
       top: 0%;
       width: 68px;
     }
+
+    @include mq('tablet') {
+      left: 87%;
+      top: 12%;
+    }
   }
+
 
   @keyframes pulse {
     from {
@@ -156,7 +174,6 @@
     @include mq('tablet') {
       display: none;
     }
-
   }
 
   @keyframes pulse {
@@ -179,7 +196,7 @@
   &__box {
     display: flex;
     justify-content: space-between;
-
+    position: relative;
 
     @include mq('tablet') {
       justify-content: center;
@@ -191,14 +208,12 @@
     padding-top: 70px;
     z-index: 2;
 
-
     @include mq('laptop') {
       padding-top: 0;
 
     }
 
     @include mq('tablet') {
-      width: fit-content;
       position: absolute;
       display: flex;
       flex-direction: column;
@@ -206,7 +221,13 @@
       justify-content: space-between;
     }
 
-    @include mq('phone') {}
+  }
+
+  &__subcontent {
+
+    @include mq('tablet') {
+      padding-bottom: 20px;
+    }
   }
 
   &__title {
@@ -219,12 +240,14 @@
     -webkit-text-fill-color: transparent;
     margin-bottom: 30px;
 
-
-
     @include mq('laptop') {
       font-size: 100px;
     }
 
+    @include mq('tablet') {
+      text-align: center;
+      font-size: 77px;
+    }
   }
 
   &__text {
@@ -244,18 +267,20 @@
     @include mq('tablet') {
       font-size: 16px;
       color: var(--white-color);
+      margin-bottom: 30px;
     }
   }
 
   &__foto {
 
     @include mq('laptop') {
-      margin: 0 auto;
+      margin-left: auto;
     }
 
+    @include mq('tablet') {
+      padding: 80px 0 0px 0;
+    }
   }
-
-
 
 
   &__img {
@@ -271,6 +296,10 @@
       height: 600px;
     }
 
+    @include mq('tablet') {
+      width: 306px;
+      height: 525px;
+    }
 
     &::after {
       content: "";
@@ -287,15 +316,12 @@
       filter: blur(100px);
       z-index: -1;
 
-
       @include mq('laptop') {
         width: 548px;
-
       }
 
       @include mq('tablet') {
         display: none;
-
       }
     }
   }
@@ -335,20 +361,15 @@
   }
 
   &__link {
-
     @include mq('tablet') {
       color: var(--white-color);
       box-shadow: inset 0 0 0 3px var(--white-color);
       padding: 17px 51px;
-
     }
-
 
     @include mq('laptop') {
       display: block;
       font-size: 18px;
     }
-
   }
-
 }
