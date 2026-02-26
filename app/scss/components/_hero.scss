@@ -56,349 +56,369 @@
     @include mq('phone') {
       bottom: 77%;
       left: -3%;
-      width: 65px;
-      height: 50px;
+             width: 79px;
+        height: 59px;
     }
   }
 
-}
+  @keyframes pulse {
+    from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
 
+    50% {
+      -webkit-transform: scale3d(1.05, 1.05, 1.05);
+      transform: scale3d(1.05, 1.05, 1.05);
+    }
 
-@keyframes pulse {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+    to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
   }
 
-  50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
+  &__person {
+    left: 48%;
+    top: 40%;
+    width: 156px;
+    height: 138px;
+    animation: pulse 2s linear infinite alternate;
 
-  to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-}
-
-&__person {
-  left: 48%;
-  top: 40%;
-  width: 156px;
-  height: 138px;
-  animation: pulse 2s linear infinite alternate;
-
-  @include mq('desktop') {
-    left: 44%;
-    top: -2%;
-  }
-
-  @include mq('laptop') {
-    width: 127px;
-    height: 71px;
-  }
-
-  @include mq('tablet') {
-    left: 4%;
-    top: 52%;
-  }
-}
-
-
-@keyframes pulse {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-
-  50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
-
-  to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-}
-
-&__two-icon {
-  left: 53%;
-  top: 69%;
-  width: 120px;
-  animation: pulse 1.4s linear infinite alternate;
-
-  @include mq('desktop') {
-    left: 41%;
-    top: 44%;
-  }
-
-  @include mq('laptop') {
-    left: 90%;
-    top: 0%;
-    width: 68px;
-  }
-
-  @include mq('tablet') {
-    left: 87%;
-    top: 12%;
-  }
-
-  @include mq('phone') {
-    left: 78%;
-    top: 6%;
-  }
-
-}
-
-
-@keyframes pulse {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-
-  50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
-
-  to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-}
-
-&__comment {
-  left: 43%;
-  top: 69%;
-  width: 60px;
-  height: 60px;
-  animation: pulse 1s linear infinite alternate;
-
-  @include mq('desktop') {
-    left: 49%;
-    top: 23%;
-  }
-
-  @include mq('laptop') {
-    left: 47%;
-    top: 67%;
-  }
-
-  @include mq('tablet') {
-    display: none;
-  }
-}
-
-@keyframes pulse {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-
-  50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
-
-  to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-}
-
-&__box {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-
-  @include mq('tablet') {
-    justify-content: center;
-  }
-
-  //  @include mq('tablet') {
-  //       justify-content: center;
-  //     }
-
-
-
-}
-
-&__content {
-  width: 100%;
-  padding-top: 70px;
-  z-index: 2;
-
-  @include mq('laptop') {
-    padding-top: 0;
-
-  }
-
-  @include mq('tablet') {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-between;
-  }
-
-}
-
-&__subcontent {
-
-  @include mq('tablet') {
-    padding-bottom: 20px;
-  }
-}
-
-&__title {
-  font-family: var(--font-alkia);
-  font-weight: 400;
-  font-size: 116px;
-  background: linear-gradient(153deg, #800a0e 5.29%, #dd1118 36.54%, #dd1219 65.38%, #80181c 91.83%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 30px;
-
-  @include mq('laptop') {
-    font-size: 100px;
-  }
-
-  @include mq('tablet') {
-    text-align: center;
-    font-size: 77px;
-  }
-
-
-  @include mq('phone') {
-
-    font-size: 40px;
-  }
-
-}
-
-&__text {
-  font-size: 20px;
-  max-width: 486px;
-  margin-bottom: 62px;
-  display: -webkit-box;
-  -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-
-  @include mq('laptop') {
-    font-size: 16px;
-    max-width: 390px;
-  }
-
-  @include mq('tablet') {
-    font-size: 16px;
-    color: var(--white-color);
-    margin-bottom: 30px;
-  }
-}
-
-&__foto {
-
-  @include mq('laptop') {
-    margin-left: auto;
-  }
-
-  @include mq('tablet') {
-    padding: 80px 0 0px 0;
-  }
-}
-
-
-&__img {
-  width: 440px;
-  height: 700px;
-  max-width: 100%;
-  position: relative;
-  object-fit: cover;
-  @extend %bg;
-
-  @include mq('laptop') {
-    width: 350px;
-    height: 600px;
-  }
-
-  @include mq('tablet') {
-    width: 306px;
-    height: 525px;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    display: block;
-    right: 0;
-    left: 45%;
-    transform: translateX(-64%);
-    top: 0;
-    width: 660px;
-    height: 100%;
-    background-color: var(--orange);
-    -webkit-filter: blur(100px);
-    filter: blur(100px);
-    z-index: -1;
+    @include mq('desktop') {
+      left: 44%;
+      top: -2%;
+    }
 
     @include mq('laptop') {
-      width: 548px;
+      width: 127px;
+      height: 71px;
+    }
+
+    @include mq('tablet') {
+      left: 4%;
+      top: 52%;
+      top: 52%;
+    }
+
+    @include mq('phone') {
+      top: 61%;
+      width: 106px
+    }
+
+
+  }
+
+  @keyframes pulse {
+    from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+      -webkit-transform: scale3d(1.05, 1.05, 1.05);
+      transform: scale3d(1.05, 1.05, 1.05);
+    }
+
+    to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+  &__two-icon {
+    left: 53%;
+    top: 69%;
+    width: 120px;
+    animation: pulse 1.4s linear infinite alternate;
+
+    @include mq('desktop') {
+      left: 41%;
+      top: 44%;
+    }
+
+    @include mq('laptop') {
+      left: 90%;
+      top: 0%;
+      width: 68px;
+    }
+
+    @include mq('tablet') {
+      left: 87%;
+      top: 12%;
+    }
+
+    @include mq('phone') {
+      left: 78%;
+      top: 6%;
+    }
+
+  }
+
+
+  @keyframes pulse {
+    from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+      -webkit-transform: scale3d(1.05, 1.05, 1.05);
+      transform: scale3d(1.05, 1.05, 1.05);
+    }
+
+    to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+  &__comment {
+    left: 43%;
+    top: 69%;
+    width: 60px;
+    height: 60px;
+    animation: pulse 1s linear infinite alternate;
+
+    @include mq('desktop') {
+      left: 49%;
+      top: 23%;
+    }
+
+    @include mq('laptop') {
+      left: 47%;
+      top: 67%;
     }
 
     @include mq('tablet') {
       display: none;
     }
   }
-}
 
+  @keyframes pulse {
+    from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
 
-&__down-list {
-  background-color: var(--bright-red-color);
-  padding: 25px 0 26px;
-  width: 100%;
-  overflow: hidden;
+    50% {
+      -webkit-transform: scale3d(1.05, 1.05, 1.05);
+      transform: scale3d(1.05, 1.05, 1.05);
+    }
 
-  @include mq('tablet') {
-    display: none;
-  }
-}
-
-&__down-item {
-  animation: hero__down-list 7s linear infinite alternate;
-  white-space: nowrap;
-}
-
-&__down-text {
-  color: var(--white-color);
-  white-space: nowrap;
-  margin-right: 70px;
-}
-
-@keyframes hero__down-list {
-
-  0% {
-    transform: translateX(0%);
+    to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
   }
 
-  100% {
-    transform: translateX(-50%);
-  }
-}
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
 
-&__link {
-  @include mq('tablet') {
+    @include mq('tablet') {
+      justify-content: center;
+      padding-bottom: 50px;
+    }
+
+    @include mq('phone') {
+      padding-bottom: 120px;
+    }
+
+  }
+
+  &__content {
+    width: 100%;
+    padding-top: 70px;
+    z-index: 2;
+
+    @include mq('laptop') {
+      padding-top: 0;
+
+    }
+
+    @include mq('tablet') {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-between;
+    }
+
+  }
+
+  &__subcontent {
+
+    @include mq('tablet') {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__title {
+    font-family: var(--font-alkia);
+    font-weight: 400;
+    font-size: 116px;
+    background: linear-gradient(153deg, #800a0e 5.29%, #dd1118 36.54%, #dd1219 65.38%, #80181c 91.83%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 30px;
+
+    @include mq('laptop') {
+      font-size: 100px;
+    }
+
+    @include mq('tablet') {
+      text-align: center;
+      font-size: 77px;
+    }
+
+
+    @include mq('phone') {
+
+      font-size: 40px;
+    }
+
+  }
+
+  &__text {
+    font-size: 20px;
+    max-width: 486px;
+    margin-bottom: 62px;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    @include mq('laptop') {
+      font-size: 16px;
+      max-width: 390px;
+    }
+
+    @include mq('tablet') {
+      font-size: 16px;
+      color: var(--white-color);
+      margin-bottom: 30px;
+    }
+
+    @include mq('phone') {
+      font-size: 14px;
+
+    }
+
+
+  }
+
+  &__foto {
+
+    @include mq('laptop') {
+      margin-left: auto;
+    }
+
+    @include mq('tablet') {
+      padding: 80px 0 0px 0;
+    }
+  }
+
+
+  &__img {
+    width: 440px;
+    height: 700px;
+    max-width: 100%;
+    position: relative;
+    object-fit: cover;
+    @extend %bg;
+
+    @include mq('laptop') {
+      width: 350px;
+      height: 600px;
+    }
+
+    @include mq('tablet') {
+      width: 306px;
+      height: 525px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      right: 0;
+      left: 45%;
+      transform: translateX(-64%);
+      top: 0;
+      width: 660px;
+      height: 100%;
+      background-color: var(--orange);
+      -webkit-filter: blur(100px);
+      filter: blur(100px);
+      z-index: -1;
+
+      @include mq('laptop') {
+        width: 548px;
+      }
+
+      @include mq('tablet') {
+        display: none;
+      }
+    }
+  }
+
+
+  &__down-list {
+    background-color: var(--bright-red-color);
+    padding: 25px 0 26px;
+    width: 100%;
+    overflow: hidden;
+
+    @include mq('tablet') {
+      display: none;
+    }
+  }
+
+  &__down-item {
+    animation: hero__down-list 7s linear infinite alternate;
+    white-space: nowrap;
+  }
+
+  &__down-text {
     color: var(--white-color);
-    box-shadow: inset 0 0 0 3px var(--white-color);
-    padding: 17px 51px;
+    white-space: nowrap;
+    margin-right: 70px;
   }
 
-  @include mq('laptop') {
-    display: block;
-    font-size: 18px;
+  @keyframes hero__down-list {
+
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
   }
-}
+
+  &__link {
+    @include mq('tablet') {
+      color: var(--white-color);
+      box-shadow: inset 0 0 0 3px var(--white-color);
+      padding: 17px 51px;
+    }
+
+    @include mq('laptop') {
+      display: block;
+      font-size: 18px;
+    }
+
+    @include mq('phone') {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+
+
+
+
+  }
 }

@@ -10,12 +10,12 @@
   }
 
 
-&__logo{
-  @include mq('laptop') {
-  max-width: 150px;
+  &__logo {
+    @include mq('laptop') {
+      max-width: 150px;
     }
-  
-}
+
+  }
 
   &__top {
     padding: 50px 0px 20px;
