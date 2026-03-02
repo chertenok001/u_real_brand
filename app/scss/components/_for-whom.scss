@@ -11,6 +11,13 @@
     grid-gap: 40px 25px;
   }
 
+
+&__text{
+ @include mq('tablet') {
+    
+  }
+
+}
   &__item {
     padding: 22px 50px;
     width: 100%;
