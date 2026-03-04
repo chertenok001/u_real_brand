@@ -20,6 +20,17 @@
     }
   }
 
+
+  @include mq('phone') {
+    &::after {
+
+      top: 50px;
+
+    }
+  }
+
+
+
   &__likes,
   &__person,
   &__two-icon,
@@ -56,8 +67,8 @@
     @include mq('phone') {
       bottom: 77%;
       left: -3%;
-             width: 79px;
-        height: 59px;
+      width: 79px;
+      height: 59px;
     }
   }
 
