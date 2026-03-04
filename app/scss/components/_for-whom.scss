@@ -1,6 +1,6 @@
 .for-whom {
   padding-bottom: 150px;
-  
+
   &__title {
     margin-bottom: 80px;
   }
@@ -9,15 +9,25 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 40px 25px;
+
+
+    @include mq('laptop') {
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+    }
+
+
+
   }
 
 
-&__text{
- @include mq('tablet') {
-    
+  &__text {
+    @include mq('desktop') {
+      font-size: 16px;
+    }
+
   }
 
-}
   &__item {
     padding: 22px 50px;
     width: 100%;
@@ -30,6 +40,14 @@
     transition: box-shadow 0.5s, background-color 0.5s;
     animation-name: fadeInLeft;
     animation-duration: 3s;
+
+    @include mq('desktop') {
+      padding: 22px 27px;
+    }
+
+
+
+
 
     &:hover {
       background-color: var(--white-color);
@@ -68,6 +86,7 @@
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);
     }
+
   }
 
   &__img {
