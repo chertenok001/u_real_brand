@@ -20,6 +20,12 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 80px;
+
+
+    @include mq('phone') {
+      flex-direction: column;
+
+    }
   }
 
   &__content {
@@ -43,16 +49,38 @@
       filter: blur(100px);
       z-index: -2;
       border-radius: 20px;
+
+      @include mq('desktop') {
+        display: none;
+      }
     }
   }
 
   &__img {
     max-width: 660px;
     width: 100%;
+
+    @include mq('desktop') {
+      height: auto;
+      max-width: 563px;
+    }
+
+    @include mq('laptop') {
+      max-width: 360px;
+    }
+
   }
 
   &__title {
     text-align: start;
+
+    @include mq('desktop') {
+      font-size: 53px;
+    }
+
+    @include mq('laptop') {
+      font-size: 50px;
+    }
   }
 
   &__subject {
@@ -61,6 +89,15 @@
     text-decoration: underline;
     display: block;
     margin-bottom: 40px;
+
+    @include mq('desktop') {
+      font-size: 28px;
+    }
+
+    @include mq('laptop') {
+      font-size: 24px;
+    }
+
   }
 
   &__item {
@@ -69,6 +106,16 @@
     justify-content: center;
     align-items: center;
     position: relative;
+
+
+    @include mq('desktop') {
+      font-size: 18px;
+      max-width: 563px;
+    }
+
+    @include mq('laptop') {
+      font-size: 16px;
+    }
 
     &::after {
       content: "";

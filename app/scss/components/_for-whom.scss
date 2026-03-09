@@ -1,6 +1,18 @@
 .for-whom {
   padding-bottom: 150px;
 
+  @include mq('desktop') {
+    padding-bottom: 100px;
+  }
+
+  @include mq('tablet') {
+    padding-bottom: 75px;
+  }
+
+  @include mq('phone') {
+    padding-bottom: 50px;
+  }
+
   &__title {
     margin-bottom: 80px;
   }
@@ -10,14 +22,10 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 40px 25px;
 
-
     @include mq('laptop') {
       grid-template-columns: repeat(1, 1fr);
       justify-items: center;
     }
-
-
-
   }
 
 
@@ -29,7 +37,6 @@
     @include mq('phone') {
       font-size: 14px;
     }
-
   }
 
   &__item {
@@ -53,7 +60,6 @@
       flex-direction: column;
       align-items: center;
     }
-
 
     &:hover {
       background-color: var(--white-color);
@@ -92,7 +98,6 @@
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);
     }
-
   }
 
   &__img {
@@ -100,8 +105,6 @@
     width: 100%;
     object-fit: contain;
     margin-right: 25px;
-
-
 
     @include mq('phone') {
       margin: 0 0 20px 0;
