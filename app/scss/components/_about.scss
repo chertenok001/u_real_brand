@@ -21,11 +21,12 @@
     justify-content: space-between;
     padding-bottom: 80px;
 
-
-    @include mq('phone') {
-      flex-direction: column;
-
+    @include mq('tablet') {
+      align-items: center;
+      justify-content: center;
     }
+
+    @include mq('phone') {}
   }
 
   &__content {
@@ -60,6 +61,18 @@
     max-width: 660px;
     width: 100%;
 
+
+
+    &--double {
+      display: none;
+      max-width: 100%;
+
+      @include mq('tablet') {
+        display: block;
+        height: auto;
+      }
+    }
+
     @include mq('desktop') {
       height: auto;
       max-width: 563px;
@@ -67,6 +80,10 @@
 
     @include mq('laptop') {
       max-width: 360px;
+    }
+
+    @include mq('tablet') {
+      display: none;
     }
 
   }
