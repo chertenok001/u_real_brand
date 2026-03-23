@@ -21,9 +21,14 @@
     justify-content: space-between;
     padding-bottom: 80px;
 
+    @include mq('laptop') {
+      justify-content: center;
+      flex-direction: row-reverse;
+    }
+
     @include mq('tablet') {
       align-items: center;
-      justify-content: center;
+      margin-bottom: 40px;
     }
 
     @include mq('phone') {}
