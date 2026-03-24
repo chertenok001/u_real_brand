@@ -28,7 +28,6 @@
 
     @include mq('tablet') {
       align-items: center;
-      margin-bottom: 40px;
     }
 
     @include mq('phone') {}
@@ -75,6 +74,7 @@
       @include mq('tablet') {
         display: block;
         height: auto;
+        margin-bottom: 40px;
       }
     }
 
