@@ -103,6 +103,10 @@
     @include mq('laptop') {
       font-size: 50px;
     }
+
+    @include mq('laptop') {
+      font-size: 36px;
+    }
   }
 
   &__subject {
@@ -120,6 +124,9 @@
       font-size: 24px;
     }
 
+    @include mq('laptop') {
+      font-size: 24px;
+    }
   }
 
   &__item {
@@ -137,6 +144,10 @@
 
     @include mq('laptop') {
       font-size: 16px;
+    }
+
+    @include mq('laptop') {
+      font-size: 14px;
     }
 
     &::after {
