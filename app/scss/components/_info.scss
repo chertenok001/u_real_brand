@@ -7,7 +7,6 @@
       flex-wrap: wrap;
       justify-content: center;
     }
-
   }
 
   &__pictures {
@@ -27,8 +26,6 @@
     @include mq('phone') {
       gap: 18px;
     }
-
-
   }
 
   &__content {
@@ -64,7 +61,6 @@
     @include mq('phone') {
       font-size: 14px;
     }
-
   }
 
   &__autor--one {
@@ -106,21 +102,18 @@
     animation-name: zoomIn;
     animation-duration: 3s;
 
-
     @include mq('desktop') {
       margin-left: auto;
     }
 
     &::before {
       position: absolute;
-
       content: '';
       width: 165px;
       height: 116px;
       right: 0;
       right: 15%;
       z-index: -1;
-
       transform: translateY(-100%);
       background-image: url(../images/icon-info.png);
     }
@@ -133,7 +126,6 @@
     margin-left: auto;
     font-weight: 600;
 
-
     @include mq('desktop') {
       font-size: 20px;
     }
@@ -145,6 +137,5 @@
     @include mq('phone') {
       padding: 13px 66px;
     }
-
   }
 }

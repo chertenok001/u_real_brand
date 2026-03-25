@@ -14,6 +14,10 @@
     background: linear-gradient(90deg, #fff7f4 4.81%, #ffeae8 32.21%, #ffede6 60.58%, #ffdcd8 94.71%);
     width: 100%;
     height: 890px;
+
+    @include mq('tablet') {
+      height: 50%;
+    }
   }
 
   &__box {
@@ -65,8 +69,6 @@
     max-width: 660px;
     width: 100%;
 
-
-
     &--double {
       display: none;
       max-width: 100%;
@@ -90,7 +92,6 @@
     @include mq('tablet') {
       display: none;
     }
-
   }
 
   &__title {
@@ -136,7 +137,6 @@
     align-items: center;
     position: relative;
 
-
     @include mq('desktop') {
       font-size: 18px;
       max-width: 563px;
@@ -166,5 +166,4 @@
   &__item:not(:last-child) {
     margin-bottom: 40px;
   }
-
 }
