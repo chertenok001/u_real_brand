@@ -28,7 +28,6 @@
     }
   }
 
-
   &__text {
     @include mq('desktop') {
       font-size: 16px;
@@ -122,8 +121,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-
-
     @include mq('tablet') {
       font-size: 44px;
     }
@@ -131,7 +128,6 @@
     @include mq('phone') {
       font-size: 25px;
     }
-
 
 
   }

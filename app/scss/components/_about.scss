@@ -2,6 +2,10 @@
   font-family: var(--font-semibold);
   position: relative;
 
+  @include mq('tablet') {
+    padding-bottom: 20px;
+  }
+
   &::after {
     position: absolute;
     content: '';
