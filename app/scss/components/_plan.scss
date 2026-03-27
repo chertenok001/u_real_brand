@@ -118,7 +118,7 @@
     stroke: var(--dark-red-color);
     stroke-width: 3;
     margin: 0 0 0 auto;
-
+    
     @include mq('phone') {
       display: none;
     }
@@ -189,6 +189,11 @@
     pointer-events: auto;
   }
 
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
   &__item {
     display: flex;
     align-items: center;
@@ -207,8 +212,6 @@
     @include mq('laptop') {
       padding-inline: 50px;
     }
-
-
   }
 
   &__subject {

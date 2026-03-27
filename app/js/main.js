@@ -4,13 +4,45 @@ $(function () {
     direction: 'horizontal',
     slidesPerView: 3,
     loop: false,
-    spaceBetween: 100,
+    spaceBetween: 20,
 
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
       clickable: true,
     },
+
+    slidesPerGroup: 1,
+
+    breakpoints: {
+
+      320: {
+        slidesPerView: 1,
+        // spaceBetween: 10,
+      },
+
+      576: {
+        // spaceBetween: 15,
+        slidesPerView: 1.5,
+      },
+
+      768: {
+        slidesPerView: 2,
+
+      },
+
+      992: {
+        slidesPerView: 2.5,
+        
+      },
+     1200: {
+        slidesPerView: 3,
+        
+      },
+    },
+
+
+
   });
 
   wow = new WOW({
