@@ -5,6 +5,7 @@ $(function () {
     slidesPerView: 3,
     loop: false,
     spaceBetween: 20,
+      speed: 1200,
 
     pagination: {
       el: '.swiper-pagination',
@@ -18,31 +19,25 @@ $(function () {
 
       320: {
         slidesPerView: 1.1,
-        // spaceBetween: 10,
       },
 
       576: {
-        // spaceBetween: 15,
         slidesPerView: 1.5,
       },
 
       768: {
         slidesPerView: 2,
-
       },
 
       992: {
         slidesPerView: 2.5,
-        
       },
+
      1200: {
         slidesPerView: 3,
         
       },
     },
-
-
-
   });
 
   wow = new WOW({
