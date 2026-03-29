@@ -107,10 +107,11 @@
     @include mq('desktop') {
       max-height: 546px;
       max-width: 645px;
-
     }
 
-
+    @include mq('phone') {
+      max-height: 396px;
+    }
   }
 
   &__info {
