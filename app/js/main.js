@@ -5,7 +5,7 @@ $(function () {
     slidesPerView: 3,
     loop: false,
     spaceBetween: 20,
-      speed: 1200,
+    speed: 1200,
 
     pagination: {
       el: '.swiper-pagination',
@@ -33,12 +33,76 @@ $(function () {
         slidesPerView: 2.5,
       },
 
-     1200: {
+      1200: {
         slidesPerView: 3,
-        
+
       },
     },
   });
+
+
+
+
+
+
+
+  const swiperReviews = new Swiper('.swiper-reviews', {
+
+    direction: 'horizontal',
+    slidesPerView: "auto",
+    loop: false,
+    spaceBetween: 20,
+    speed: 1200,
+
+    pagination: {
+      el: '.reviews__pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+
+    slidesPerGroup: 1,
+
+    breakpoints: {
+
+      320: {
+        slidesPerView: 1.1,
+      },
+
+      576: {
+        slidesPerView: 1.5,
+      },
+
+      768: {
+        slidesPerView: 2,
+      },
+
+      992: {
+        slidesPerView: 2,
+      },
+
+      1200: {
+        slidesPerView: 2,
+
+      },
+    },
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   wow = new WOW({
     boxClass: 'wow',
