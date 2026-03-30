@@ -9,8 +9,9 @@
   }
 
   .container {
-    padding: 0;
-    max-width: 100%;
+    // width: 100%;
+    // padding: 0;
+    // max-width: 1400px;
 
     @include mq('phone') {
       padding: 0 10px;
@@ -128,18 +129,6 @@
       }
     }
 
-    &--light:hover {
-      box-shadow: rgba(255, 182, 193) 0px 50px 50px -20px, rgba(255, 182, 193) 0px 30px 60px -30px, rgba(255, 182, 193) 0px -2px 6px 0px inset;
-    }
-
-    &--medium:hover {
-      box-shadow: rgba(255, 160, 122) 0px 50px 50px -20px, rgba(255, 160, 122) 0px 30px 60px -30px, rgba(255, 160, 122) 0px -2px 6px 0px inset;
-    }
-
-    &--pro:hover {
-      box-shadow: rgba(220, 20, 60) 0px 50px 50px -20px, rgba(220, 20, 60) 0px 30px 60px -30px, rgba(220, 20, 60) 0px -2px 6px 0px inset;
-      background-color: var(--beige-color);
-    }
   }
 
   &__content:not(:last-child) {

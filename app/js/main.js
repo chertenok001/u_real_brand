@@ -49,15 +49,18 @@ $(function () {
   const swiperReviews = new Swiper('.swiper-reviews', {
 
     direction: 'horizontal',
-    slidesPerView: "auto",
+    slidesPerView: 3,
     loop: false,
     spaceBetween: 20,
     speed: 1200,
+
+
 
     pagination: {
       el: '.reviews__pagination',
       type: 'bullets',
       clickable: true,
+
     },
 
     slidesPerGroup: 1,
@@ -77,16 +80,50 @@ $(function () {
       },
 
       992: {
-        slidesPerView: 2,
+        slidesPerView: 3,
       },
 
       1200: {
-        slidesPerView: 2,
+        slidesPerView: 3,
 
       },
     },
+
+    mousewheel: {
+      sensitivity: 1,
+    }
   });
 
+
+
+
+  // const swiperReviews = new Swiper('.swiper-reviews', {
+  //   slidesPerView: 3,
+  //   spaceBetween: 20,
+
+  //   watchSlidesProgress: true,
+
+  //   on: {
+  //     init: function () {
+  //       animateSlides(this);
+  //     },
+  //     slideChange: function () {
+  //       animateSlides(this);
+  //     }
+  //   }
+  // });
+
+  // function animateSlides(swiper) {
+  //   swiper.slides.forEach(slide => {
+  //     slide.classList.remove('animate');
+  //   });
+
+  //   swiper.slides.forEach(slide => {
+  //     if (slide.classList.contains('swiper-slide-visible')) {
+  //       slide.classList.add('animate');
+  //     }
+  //   });
+  // }
 
 
 
