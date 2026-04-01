@@ -40,18 +40,11 @@ $(function () {
     },
   });
 
-
-
-
-
-
-
   const swiperReviews = new Swiper('.swiper-reviews', {
-
     direction: 'horizontal',
     slidesPerView: 3,
     loop: false,
-    spaceBetween: 20,
+    spaceBetween: 60,
     speed: 1200,
 
 
@@ -68,24 +61,29 @@ $(function () {
     breakpoints: {
 
       320: {
-        slidesPerView: 1.1,
+        slidesPerView: 1,
       },
 
       576: {
-        slidesPerView: 1.5,
+        slidesPerView: 1,
+        spaceBetween: 80,
       },
 
       768: {
-        slidesPerView: 2,
+        slidesPerView:2,
+        spaceBetween: 120,
       },
 
       992: {
-        slidesPerView: 3,
+        slidesPerView: 2,
+        slidesPerGroup: 3,
+        spaceBetween: 100,
       },
 
       1200: {
-        slidesPerView: 3,
-
+        slidesPerView: 2,
+        slidesPerGroup: 3,
+         spaceBetween: 70,
       },
     },
 
@@ -93,53 +91,6 @@ $(function () {
       sensitivity: 1,
     }
   });
-
-
-
-
-  // const swiperReviews = new Swiper('.swiper-reviews', {
-  //   slidesPerView: 3,
-  //   spaceBetween: 20,
-
-  //   watchSlidesProgress: true,
-
-  //   on: {
-  //     init: function () {
-  //       animateSlides(this);
-  //     },
-  //     slideChange: function () {
-  //       animateSlides(this);
-  //     }
-  //   }
-  // });
-
-  // function animateSlides(swiper) {
-  //   swiper.slides.forEach(slide => {
-  //     slide.classList.remove('animate');
-  //   });
-
-  //   swiper.slides.forEach(slide => {
-  //     if (slide.classList.contains('swiper-slide-visible')) {
-  //       slide.classList.add('animate');
-  //     }
-  //   });
-  // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   wow = new WOW({
     boxClass: 'wow',
@@ -179,7 +130,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
-
 
 document.addEventListener('DOMContentLoaded', () => {
   const burger = document.querySelector('.menu__btn');

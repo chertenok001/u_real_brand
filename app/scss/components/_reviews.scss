@@ -217,6 +217,15 @@
   &__img {
     border-radius: 50px;
     margin-right: 20px;
+    object-fit: cover;
+  }
+
+  &__pagination {
+    display: none;
+
+    @include mq('laptop') {
+      display: block;
+    }
   }
 
 }
