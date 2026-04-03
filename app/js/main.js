@@ -62,6 +62,7 @@ $(function () {
 
       320: {
         slidesPerView: 1,
+        //  spaceBetween: 150,
       },
 
       576: {
@@ -71,11 +72,11 @@ $(function () {
 
       768: {
         slidesPerView:2,
-        spaceBetween: 120,
+        spaceBetween: 80,
       },
 
       992: {
-        slidesPerView: 2,
+        slidesPerView:2,
         slidesPerGroup: 3,
         spaceBetween: 100,
       },

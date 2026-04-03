@@ -17,8 +17,6 @@
     margin: 0 auto 80px;
   }
 
-
-
   &__box {
     display: flex;
     padding-bottom: 85px;
@@ -35,6 +33,10 @@
     height: auto;
     position: relative;
     transition: box-shadow 0.3s;
+
+     @include mq('laptop') {
+      padding: 20px;
+    }
 
     &:hover {
       box-shadow: rgb(191, 9, 9) 0px 25px 20px -20px;
@@ -76,7 +78,6 @@
         opacity: 1;
       }
     }
-
 
     &--two {
       animation-name: backInUp;
