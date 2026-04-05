@@ -8,13 +8,45 @@
     letter-spacing: 0.01em;
     text-transform: uppercase;
     color: var(--dark-red-color);
+
+    @include mq('laptop') {
+      font-size: 49px;
+    }
+
+    @include mq('tablet') {
+      font-size: 36px;
+    }
+
+
+    @include mq('phone') {
+      font-size: 31px;
+    }
+
+
   }
 
   &__text {
     text-align: center;
     max-width: 478px;
     width: 100%;
+    font-size: 20px;
     margin: 0 auto 80px;
+
+   
+
+    @include mq('tablet') {
+      font-size: 18px;
+    }
+
+
+    @include mq('phone') {
+      font-size: 16px;
+    }
+
+
+
+
+
   }
 
   &__box {
@@ -34,7 +66,7 @@
     position: relative;
     transition: box-shadow 0.3s;
 
-     @include mq('laptop') {
+    @include mq('laptop') {
       padding: 20px;
     }
 
