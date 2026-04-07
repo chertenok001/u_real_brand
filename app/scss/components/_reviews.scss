@@ -64,15 +64,16 @@
     }
 
     &::after {
-      display: block;
       content: '';
       position: absolute;
-      background-image: url('../images/icon-reviews.svg');
-      object-fit: cover;
+      background-image: url(../images/icon-reviews.svg);
       width: 82px;
       height: 60px;
       top: -50px;
       right: 20px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      filter: invert(13%) sepia(42%) saturate(5800%) hue-rotate(345deg) brightness(61%) contrast(100%);
     }
 
     &--one {

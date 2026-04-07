@@ -10,6 +10,8 @@
   }
 
   &__logo {
+    filter: invert(13%) sepia(42%) saturate(5800%) hue-rotate(345deg) brightness(61%) contrast(100%);
+
     @include mq('laptop') {
       max-width: 150px;
     }

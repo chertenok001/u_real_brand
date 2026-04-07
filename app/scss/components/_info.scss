@@ -115,7 +115,9 @@
       right: 15%;
       z-index: -1;
       transform: translateY(-100%);
-      background-image: url(../images/icon-info.png);
+      background-image: url(../images/sprite.svg#icon-info);
+      @extend %bg;
+      filter: invert(87%) sepia(5%) saturate(2695%) hue-rotate(314deg) brightness(105%) contrast(101%);
     }
   }
 

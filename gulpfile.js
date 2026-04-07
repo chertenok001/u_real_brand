@@ -132,8 +132,6 @@ function building() {
 }
 
 
-
-
 // function building() {
 //   return src([
 //       'app/**/*.html',

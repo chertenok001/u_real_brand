@@ -16,7 +16,7 @@
   }
 
   &__logo {
-    display: block;
+    fill: #fff;
 
     @include mq('tablet') {
       max-width: 80%;
