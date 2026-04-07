@@ -1,26 +1,19 @@
 .footer {
-
+  background-color: var(--dark-red-color);
 
   @include mq('phone') {
     padding: 50px 0 30px;
-
   }
-
-  background-color: var(--dark-red-color);
 
   &__content {
     display: flex;
     justify-content: space-between;
 
-
     @include mq('phone') {
       flex-direction: column;
       align-items: center;
-
     }
-
   }
-
 
   &__logo {
     display: block;
@@ -32,17 +25,14 @@
     @include mq('phone') {
       margin-bottom: 50px;
     }
-
   }
 
-
-  &-social__name {
+  &__social-name {
 
     @include mq('laptop') {
       font-size: 22px;
     }
   }
-
 
   &-social__mail {
     font-size: 20px;

@@ -52,7 +52,6 @@
     }
   }
 
-
   &__btn {
     display: none;
     position: relative;
@@ -107,11 +106,5 @@
     @include mq("laptop") {
       display: block;
     }
-
   }
-
-  // &__logo {
-  //  max-width: 70%;
-  // } 
-
 }

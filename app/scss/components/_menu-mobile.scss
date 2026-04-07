@@ -24,7 +24,6 @@
     z-index: 1;
     border-radius: 20px 0 0 20px;
 
-
     &--active {
       padding-bottom: 50px;
       transform: translateX(0);
@@ -35,7 +34,6 @@
       margin-bottom: 50px;
       text-align: center;
       display: block;
-
     }
 
     &__link {
@@ -109,11 +107,5 @@
         display: block;
       }
     }
-
   }
-
-
-
-
-
 }

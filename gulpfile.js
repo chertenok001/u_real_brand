@@ -112,11 +112,13 @@ function images() {
     .pipe(dest('app/images'))
 }
 
+
+
 function building() {
   return src([
       'app/**/*.html',
       'app/fonts/*.*',
-      'app/images/*.*',
+      'app/images/**/*.webp',
       'app/images/*/*.*',
       '!app/images/src/*.*',
       '!app/images/icons/*.svg',
@@ -128,6 +130,26 @@ function building() {
     })
     .pipe(dest('dist'))
 }
+
+
+
+
+// function building() {
+//   return src([
+//       'app/**/*.html',
+//       'app/fonts/*.*',
+//       'app/images/*.*',
+//       'app/images/*/*.*',
+//       '!app/images/src/*.*',
+//       '!app/images/icons/*.svg',
+//       'app/images/sprite.svg',
+//       'app/css/style.min.css',
+//       'app/js/main.min.js'
+//     ], {
+//       base: 'app'
+//     })
+//     .pipe(dest('dist'))
+// }
 
 function cleanDist() {
   return del('dist')

@@ -17,12 +17,9 @@
       font-size: 36px;
     }
 
-
     @include mq('phone') {
       font-size: 31px;
     }
-
-
   }
 
   &__text {
@@ -32,21 +29,13 @@
     font-size: 20px;
     margin: 0 auto 80px;
 
-   
-
     @include mq('tablet') {
       font-size: 18px;
     }
 
-
     @include mq('phone') {
       font-size: 16px;
     }
-
-
-
-
-
   }
 
   &__box {
@@ -260,5 +249,4 @@
       display: block;
     }
   }
-
 }

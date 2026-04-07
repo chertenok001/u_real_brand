@@ -35,6 +35,7 @@
   }
 
   &__likes {
+    top: 0;
     left: 40%;
     transform: translateY(-20px);
     max-width: 100%;
@@ -47,23 +48,26 @@
     }
 
     @include mq('laptop') {
-      bottom: 49%;
-      width: 73px;
-      height: 65px;
+      top: 35%;
+      width: 63px;
+      height: 54px;
+      left: 46%;
     }
 
+
     @include mq('tablet') {
-      bottom: 66%;
-      left: 30%;
+      top: 19%;
+      left: 5%;
     }
 
     @include mq('phone') {
       bottom: 77%;
-      left: -3%;
+      left: 3%;
       width: 79px;
       height: 59px;
     }
   }
+
 
   @keyframes pulse {
     from {
@@ -146,8 +150,8 @@
     }
 
     @include mq('tablet') {
-      left: 87%;
-      top: 12%;
+      left: 37%;
+      top: 31%;
     }
 
     @include mq('phone') {
@@ -155,7 +159,6 @@
       top: 6%;
     }
   }
-
 
   @keyframes pulse {
     from {
@@ -187,7 +190,7 @@
     }
 
     @include mq('laptop') {
-      left: 47%;
+      left: 50%;
       top: 67%;
     }
 
@@ -303,6 +306,7 @@
   }
 
   &__foto {
+    position: relative;
 
     @include mq('laptop') {
       margin-left: auto;
@@ -310,6 +314,30 @@
 
     @include mq('tablet') {
       padding: 80px 0 0px 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      right: 50%;
+      left: 50%;
+      transform: translateX(-25%);
+      top: 0;
+      width: 613px;
+      height: 100%;
+      background-color: var(--orange);
+      -webkit-filter: blur(100px);
+      filter: blur(100px);
+      z-index: -1;
+
+      @include mq('laptop') {
+        width: 483px;
+      }
+
+      @include mq('tablet') {
+        display: none;
+      }
     }
   }
 
@@ -327,35 +355,15 @@
     }
 
     @include mq('tablet') {
+      padding-top: 96px;
       width: 306px;
-      height: 525px;
+      height: 587px;
     }
 
-    &::after {
-      content: "";
-      position: absolute;
-      display: block;
-      right: 0;
-      left: 45%;
-      transform: translateX(-64%);
-      top: 0;
-      width: 660px;
-      height: 100%;
-      background-color: var(--orange);
-      -webkit-filter: blur(100px);
-      filter: blur(100px);
-      z-index: -1;
-
-      @include mq('laptop') {
-        width: 548px;
-      }
-
-      @include mq('tablet') {
-        display: none;
-      }
+    @include mq('phone') {
+      padding-top: 40px;
     }
   }
-
 
   &__down-list {
     background-color: var(--bright-red-color);
